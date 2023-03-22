@@ -84,8 +84,6 @@ form button:hover{
     padding: 0rem 0.8rem;
 }
 
-/* pointer events se ye hoga ki ye inactive hojayega on site to isse ham pure button mein kahi 
-bhi click karke delete kar sakte hai otherwise hame teash icon se alag click karna padta */
 .fa-trash, .fa-check{
     pointer-events: none;
 }
