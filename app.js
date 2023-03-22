@@ -25,7 +25,6 @@ function addTodo(event){
     // it prevent form from submitting
      event.preventDefault();
     
-    // createElement se ham html ka koi bhi tag js m bana sakte hai
     const todoDiv = document.createElement("div");
     // this will add a class to tag div
     todoDiv.classList.add("todo");
@@ -33,7 +32,6 @@ function addTodo(event){
     const newTodo = document.createElement("li");
     newTodo.innerText = todoInput.value;
     newTodo.classList.add("todo-item");
-    // append child se hamne newtodo ko tododiv k ander place kar diya
     todoDiv.appendChild(newTodo);
 
     //  ADD todo to local storage
@@ -58,7 +56,6 @@ function addTodo(event){
 
 function deleteCheck(e){
     const item = e.target;
-    // const indexOfItemToBeDeleted = indexOf(e.target);
 
     // Delete Todo
     if(item.classList[0] === "trash-btn"){
@@ -131,7 +128,6 @@ function getTodos(){
         todos = JSON.parse(localStorage.getItem("todos"));
     }
     todos.forEach(function(todo){
-        // createElement se ham html ka koi bhi tag js m bana sakte hai
     const todoDiv = document.createElement("div");
     // this will add a class to tag div
     todoDiv.classList.add("todo");
@@ -139,7 +135,6 @@ function getTodos(){
     const newTodo = document.createElement("li");
     newTodo.innerText = todo;
     newTodo.classList.add("todo-item");
-    // append child se hamne newtodo ko tododiv k ander place kar diya
     todoDiv.appendChild(newTodo);
 
     const completedButton = document.createElement("button");
